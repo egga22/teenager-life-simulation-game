@@ -1,0 +1,142 @@
+/*
+  Basic layout styling. We keep everything contained so that the game
+  looks consistent across devices without any external dependencies.
+  Colours and fonts are chosen to evoke a friendly, approachable mood
+  suitable for a casual life‑simulation game.
+*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f8fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#game-container {
+  width: 800px;
+  max-width: 90vw;
+  height: 600px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+#event-area {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#event-area h2 {
+  margin-top: 0;
+}
+
+#choices-container {
+  margin-top: 20px;
+}
+
+.choice-button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.choice-button:hover {
+  background: #0056b3;
+}
+
+#menu {
+  height: 60px;
+  display: flex;
+  border-top: 1px solid #eee;
+}
+
+#menu button {
+  flex: 1;
+  border: none;
+  background: #fafafa;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+#menu button:hover {
+  background: #e5e5e5;
+}
+
+#overlay-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.overlay h3 {
+  margin-top: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.stat-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.stat-bar span {
+  width: 100px;
+  font-weight: bold;
+}
+
+.stat-progress {
+  flex: 1;
+  height: 12px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.stat-progress div {
+  height: 100%;
+  border-radius: 4px;
+}
